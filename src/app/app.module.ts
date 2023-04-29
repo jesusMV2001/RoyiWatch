@@ -8,6 +8,7 @@ import { CabeceraComponent } from './components/cabecera/cabecera.component';
 import { IndexComponent } from './components/index/index.component';
 import { FormComponent } from './components/form/form.component';
 import { DetailsComponent } from './components/details/details.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DetailsComponent } from './components/details/details.component';
     CabeceraComponent,
     IndexComponent,
     FormComponent,
-    DetailsComponent
+    DetailsComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
