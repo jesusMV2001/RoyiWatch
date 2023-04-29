@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,9 @@ import { IndexComponent } from './components/index/index.component';
 import { FormComponent } from './components/form/form.component';
 import { DetailsComponent } from './components/details/details.component';
 import { ErrorComponent } from './components/error/error.component';
+import { ButtonModule } from 'primeng/button';
+import { CarouselModule } from 'primeng/carousel';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,17 @@ import { ErrorComponent } from './components/error/error.component';
     IndexComponent,
     FormComponent,
     DetailsComponent,
-    ErrorComponent
+    ErrorComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ButtonModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
