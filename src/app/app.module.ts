@@ -13,6 +13,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
     FormsModule,
     ReactiveFormsModule,
     ButtonModule,
-    CarouselModule
+    CarouselModule,
+    MultiSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

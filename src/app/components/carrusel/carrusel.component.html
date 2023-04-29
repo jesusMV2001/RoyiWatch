@@ -1,1 +1,19 @@
-<p>carrusel works!</p>
+<div class="card">
+    <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions" [circular]="true" >
+    <ng-template let-product pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+            <div class="mb-3">
+                <img src="assets/images/portada.jpg" [alt]="product.name" class="shadow-2" />
+            </div>
+            <div>
+                <h4 class="mb-1">{{ product.titulo }}</h4>
+                <h6 class="mt-0 mb-3">{{ product.fecha }}</h6>
+                <div class="car-buttons mt-5">
+                    <button pButton label="Ver en detalle" icon="pi pi-search"></button>
+                    
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>
+</div>
