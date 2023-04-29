@@ -9,6 +9,14 @@ import { IndexComponent } from './components/index/index.component';
 import { FormComponent } from './components/form/form.component';
 import { DetailsComponent } from './components/details/details.component';
 import { ErrorComponent } from './components/error/error.component';
+import { MultiSelectModule } from 'primeng/multiselect';
+import {ButtonModule}from 'primeng/button'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +32,10 @@ import { ErrorComponent } from './components/error/error.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MultiSelectModule,
+    ButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
