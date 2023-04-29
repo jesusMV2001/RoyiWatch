@@ -8,7 +8,7 @@ import { ErrorComponent } from './components/error/error.component';
 const routes: Routes = [
   {path:"",component:IndexComponent},
   {path:"details/:id",component:DetailsComponent},
-  {path:"form/:id",component:FormComponent},
+  {path:"form",component:FormComponent},
   {path:"**",component:ErrorComponent}
 ];
 
