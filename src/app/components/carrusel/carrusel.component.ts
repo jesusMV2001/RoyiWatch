@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Pelicula } from 'src/app/model/pelicula';
+import { PeliculasService } from 'src/app/services/peliculas.service';
 
 
 @Component({
@@ -7,20 +8,20 @@ import { Component } from '@angular/core';
   templateUrl: './carrusel.component.html',
   styleUrls: ['./carrusel.component.css']
 })
-export class CarruselComponent {
-  public products: any[];
+export class CarruselComponent implements OnInit {
+  public products: Pelicula[];
 
   responsiveOptions: any[];
 
-  constructor() {
-    let p = new producto();
-    this.products = [];
-    this.products.push(p);
-    this.products.push(p);
-    this.products.push(p);
+  constructor(private peliService: PeliculasService) {
   }
 
   ngOnInit() {
+    
+    this.peliService.findAll().subscribe(data => {
+      console.log(data);
+      this.products = data;
+    });
     
 
       this.responsiveOptions = [

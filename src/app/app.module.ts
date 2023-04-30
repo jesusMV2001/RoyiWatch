@@ -14,6 +14,8 @@ import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { HttpClientModule } from '@angular/common/http';
+import { PeliculasService } from './services/peliculas.service';
 
 @NgModule({
   declarations: [
@@ -34,9 +36,10 @@ import { MultiSelectModule } from 'primeng/multiselect';
     ReactiveFormsModule,
     ButtonModule,
     CarouselModule,
-    MultiSelectModule
+    MultiSelectModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PeliculasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

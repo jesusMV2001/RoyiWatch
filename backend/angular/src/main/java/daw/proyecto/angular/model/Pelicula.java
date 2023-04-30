@@ -24,8 +24,8 @@ public class Pelicula {
         this.fecha=fecha;
     }
     
-    public String getId(){
-        return titulo;
+    public long getId(){
+        return id;
     }
 
     public String getTitulo(){
