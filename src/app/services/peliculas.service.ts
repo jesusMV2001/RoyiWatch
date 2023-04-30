@@ -6,15 +6,19 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class PeliculasService {
 
-  private usersUrl: string;
+  private listaPeliculas: string;
+  private formulario: string;
 
   constructor(private http: HttpClient) {
-    this.usersUrl = 'http://localhost:8080/peliculas';
+    this.listaPeliculas = 'http://localhost:8080/peliculas';
+    this.formulario = 'http://localhost:8080/form';
   }
 
   public findAll(): Observable<Pelicula[]> {
-    return this.http.get<Pelicula[]>(this.usersUrl);
+    return this.http.get<Pelicula[]>(this.listaPeliculas);
   }
 
-  
+  public save(user: Pelicula) {
+    return this.http.post<Pelicula>(this.formulario, user);
+  }
 }
