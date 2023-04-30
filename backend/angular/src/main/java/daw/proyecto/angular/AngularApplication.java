@@ -23,7 +23,7 @@ public class AngularApplication {
             Stream.of("John", "Julie", "Jennifer", "Helen", "Rachel").forEach(name -> {
                 Pelicula user = new Pelicula(name, name.toLowerCase() + "@domain.com");
                 userRepository.save(user);
-            });
+            }); 
         };
 	}
 
