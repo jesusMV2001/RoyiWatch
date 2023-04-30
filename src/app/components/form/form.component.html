@@ -1,7 +1,8 @@
-<form [formGroup]="form" (ngSubmit)="sendData()">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="h-screen">
         <div class="container flex flex-column justify-center items-center ">
-            <p >Put there the name: <input type="text" formControlName="name"  id=""> </p>
+            <p>Put there the titulo: <input type="text" formControlName="titulo"  id=""> </p>
+            <p>Put there the fecha: <input type="text" formControlName="fecha"  id=""> </p>
             <p>Put there to upload: <input type="file"  id="" formControlName="video"></p>
             <p-multiSelect [options]="categories" optionLabel="name" formControlName="categories">sexo</p-multiSelect>
             <button type="submit">SEND</button>
