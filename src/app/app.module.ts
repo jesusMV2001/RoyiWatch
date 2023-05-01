@@ -16,7 +16,6 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { HttpClientModule } from '@angular/common/http';
 import { PeliculasService } from './services/peliculas.service';
-import { BuscadorComponent } from './components/buscador/buscador.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 
@@ -30,7 +29,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     DetailsComponent,
     ErrorComponent,
     CarruselComponent,
-    BuscadorComponent
+    
   ],
   imports: [
     BrowserModule,

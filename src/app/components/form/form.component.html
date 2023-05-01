@@ -3,9 +3,9 @@
         <div class="container flex flex-column justify-center items-center   border-black border-2 ">
             <p class="my-4">Put there the title: <input class="mt-6" type="text" formControlName="titulo"  id=""> </p>
             <p class="my-4 flex flex-column ">Put there the date of the release : <input class="mt-6 border-2 border-black" type="date"  formControlName="fecha"  id=""> </p>
-            <p class="my-4 flex flex-column">Put there to upload a video : <input type="file" class="mt-6 " id="" formControlName="video"></p>
+            <p class="my-4 flex flex-column">Put there to upload a img : <input type="file" class="mt-6 "  id="" formControlName="img" (change)="upload($event)"></p>
             <p-multiSelect class="my-4" [options]="categories" optionLabel="name" class="mt-6" formControlName="categories">sexo</p-multiSelect>
-            <p-button class="my-4" type="submit" >SEND</p-button>
+            <p-button class="my-4"  type="submit" >SEND</p-button>
         </div>
     </div>
     

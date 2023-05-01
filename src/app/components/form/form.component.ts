@@ -4,6 +4,7 @@ import { Pelicula } from 'src/app/model/pelicula';
 import { v4 as uuidv4 } from 'uuid';
 import { ActivatedRoute,Router } from '@angular/router';
 import { PeliculasService } from 'src/app/services/peliculas.service';
+import { HttpClient } from '@angular/common/http';
 
 
 interface Moviee {
@@ -21,6 +22,7 @@ export class FormComponent {
   form:any;
   categories: Moviee[];
   selectedCategories: Moviee[];
+  fileName = '';
 
     
   constructor(private formBuilder:FormBuilder,
@@ -56,6 +58,16 @@ export class FormComponent {
 
   }
 
+  upload(event:any){
+    const file=event.target.files[0];
+    if(file){
+      const formData = new FormData();
+      formData.append('file',file);
+
+      this.peliculaService.uploadfile(formData)
+    }
+  }
+  
   onSubmit(){
     this.pelicula = new Pelicula(this.form.value.titulo,this.form.value.fecha);
     console.log(this.pelicula);
