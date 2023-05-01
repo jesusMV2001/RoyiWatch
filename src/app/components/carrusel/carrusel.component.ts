@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Pelicula } from 'src/app/model/pelicula';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 
@@ -13,7 +14,8 @@ export class CarruselComponent implements OnInit {
 
   responsiveOptions: any[];
 
-  constructor(private peliService: PeliculasService) {
+  constructor(private peliService: PeliculasService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -41,5 +43,10 @@ export class CarruselComponent implements OnInit {
           }
       ];
   }
+
+  verDetalle(peli: Pelicula){
+    this.router.navigate(['details/'+peli.id]);
+  }
+
 }
  

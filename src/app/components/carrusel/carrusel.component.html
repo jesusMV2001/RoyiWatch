@@ -9,7 +9,7 @@
                 <h4 class="mb-1">{{ product.titulo }}</h4>
                 <h6 class="mt-0 mb-3">{{ product.fecha }}</h6>
                 <div class="car-buttons mt-5">
-                    <button pButton label="Ver en detalle" icon="pi pi-search"></button>
+                    <button (click)="verDetalle(product)" pButton label="Ver en detalle" icon="pi pi-search"></button>
                     
                 </div>
             </div>

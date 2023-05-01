@@ -17,6 +17,7 @@ export class DetailsComponent implements OnInit {
     private router: Router,
     private peliService: PeliculasService
   ){
+    this.pelicula=new Pelicula("aa","aa");
   }
 
   ngOnInit(){
