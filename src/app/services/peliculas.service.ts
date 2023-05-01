@@ -16,6 +16,10 @@ export class PeliculasService {
     this.formulario = 'http://localhost:8080/form';
   }
 
+  public uploadfile(formData:FormData):Observable<any>{
+    return this.http.post(this.formulario,formData)
+  }
+
   public findAll(): Observable<Pelicula[]> {
     return this.http.get<Pelicula[]>(this.listaPeliculas);
   }
