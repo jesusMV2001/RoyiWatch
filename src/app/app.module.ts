@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PeliculasService } from './services/peliculas.service';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { InputTextModule } from 'primeng/inputtext';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { InputTextModule } from 'primeng/inputtext';
     CarouselModule,
     MultiSelectModule,
     HttpClientModule,
-    InputTextModule
+    InputTextModule,
+    AutoCompleteModule
   ],
   providers: [PeliculasService],
   bootstrap: [AppComponent]

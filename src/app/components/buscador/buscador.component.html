@@ -1,0 +1,4 @@
+<span class="p-input-icon-right">
+    <p-autoComplete (onBlur)="clickEvent()" (onFocus)="clickEvent()" [(ngModel)]="selectedItem" [suggestions]="suggestions" (completeMethod)="search($event)"></p-autoComplete>
+    <i class="pi" [ngClass]="spinner ? 'pi pi-search' : 'pi pi-spin pi-spinner'" ></i>
+</span>

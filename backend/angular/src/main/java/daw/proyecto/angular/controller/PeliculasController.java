@@ -36,4 +36,10 @@ public class PeliculasController {
     public Pelicula detallePelicula(@PathVariable long id) {
         return (Pelicula) peliculaRepository.findById(id).get();
     }
+
+    @GetMapping("/buscar/{titulo}")
+    public List<Pelicula> findByPelicula(@PathVariable String titulo) {
+        return (List<Pelicula>) peliculaRepository.findByTitulo(titulo);
+    }
+
 }
