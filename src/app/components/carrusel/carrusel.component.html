@@ -1,9 +1,9 @@
 <div class="card">
     <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions" [circular]="true" >
     <ng-template let-product pTemplate="item">
-        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 ">
             <div class="mb-3">
-                <img src="assets/images/portada.jpg" [alt]="product.name" class="shadow-2" />
+                <img src="assets/images/portada.jpg" [alt]="product.name" class="shadow-2 h-96 ml-32" />
             </div>
             <div>
                 <h4 class="mb-1">{{ product.titulo }}</h4>

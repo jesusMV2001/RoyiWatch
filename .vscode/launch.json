@@ -3,6 +3,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "AngularApplication",
+      "request": "launch",
+      "mainClass": "daw.proyecto.angular.AngularApplication",
+      "projectName": "angular"
+    },
+    {
       "name": "ng serve",
       "type": "pwa-chrome",
       "request": "launch",

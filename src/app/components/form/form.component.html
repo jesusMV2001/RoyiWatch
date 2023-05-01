@@ -1,11 +1,11 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <div class="h-screen">
-        <div class="container flex flex-column justify-center items-center ">
-            <p>Put there the titulo: <input type="text" formControlName="titulo"  id=""> </p>
-            <p>Put there the fecha: <input type="text" formControlName="fecha"  id=""> </p>
-            <p>Put there to upload: <input type="file"  id="" formControlName="video"></p>
-            <p-multiSelect [options]="categories" optionLabel="name" formControlName="categories">sexo</p-multiSelect>
-            <button type="submit">SEND</button>
+    <div class="h-screen text-xl mt-32">
+        <div class="container flex flex-column justify-center items-center   border-black border-2 ">
+            <p class="my-4">Put there the title: <input class="mt-6" type="text" formControlName="titulo"  id=""> </p>
+            <p class="my-4 flex flex-column ">Put there the date of the release : <input class="mt-6 border-2 border-black" type="date"  formControlName="fecha"  id=""> </p>
+            <p class="my-4 flex flex-column">Put there to upload a video : <input type="file" class="mt-6 " id="" formControlName="video"></p>
+            <p-multiSelect class="my-4" [options]="categories" optionLabel="name" class="mt-6" formControlName="categories">sexo</p-multiSelect>
+            <button type="submit" class="my-4">SEND</button>
         </div>
     </div>
     
