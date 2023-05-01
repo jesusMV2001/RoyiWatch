@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import daw.proyecto.angular.model.Pelicula;
@@ -32,14 +31,20 @@ public class PeliculasController {
         peliculaRepository.save(p);
     }
 
-    @GetMapping("/detalle/{id}")
-    public Pelicula detallePelicula(@PathVariable long id) {
+    @GetMapping("/detalle/id/{id}")
+    public Pelicula detallePeliculaById(@PathVariable long id) {
         return (Pelicula) peliculaRepository.findById(id).get();
     }
 
+    @GetMapping("/detalle/titulo/{titulo}")
+    public Pelicula detallePeliculaByTitulo(@PathVariable String titulo) {
+        return (Pelicula) peliculaRepository.findByTitulo(titulo);
+    }
+
     @GetMapping("/buscar/{titulo}")
-    public List<Pelicula> findByPelicula(@PathVariable String titulo) {
-        return (List<Pelicula>) peliculaRepository.findByTitulo(titulo);
+    public List<String> findByPelicula(@PathVariable String titulo) {
+        titulo = titulo.toLowerCase();
+        return (List<String>) peliculaRepository.findAllByTitulo(titulo);
     }
 
 }

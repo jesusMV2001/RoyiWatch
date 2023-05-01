@@ -1,5 +1,6 @@
 package daw.proyecto.angular.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,6 +12,7 @@ public class Pelicula {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(nullable = false, unique = true)
     private String titulo;
     private String fecha;
     

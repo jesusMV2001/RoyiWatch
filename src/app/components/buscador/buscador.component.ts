@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PeliculasService } from 'src/app/services/peliculas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-buscador',
@@ -6,13 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./buscador.component.css']
 })
 export class BuscadorComponent {
-  value: string;
   spinner: boolean;
   items: any[];
   selectedItem: any;
   suggestions: any[];
 
-  constructor(){
+  constructor(
+    private router: Router,
+    private peliService: PeliculasService
+    ){
   }
 
   ngOnInit(){
@@ -23,8 +27,17 @@ export class BuscadorComponent {
     this.spinner = !this.spinner;
   }
 
+  onSelect(event){
+    this.peliService.findByTitulo(this.selectedItem).subscribe(data =>{
+      
+      this.router.navigate(['details/'+data.id]);
+    });
+  }
+
   search(event) {
-    this.suggestions = [...Array(10).keys()].map(item => event.query + '-' + item);
+    this.peliService.findAllByTitulo(event.query).subscribe(data => {
+      this.suggestions = data;
+    });
   }
 
 }
