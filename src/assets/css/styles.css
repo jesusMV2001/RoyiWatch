@@ -217,7 +217,10 @@ body {
 
 }
 
-
+a:hover,
+.active{
+    color: red;
+}
 
 .mid-form{
     width: 50%;

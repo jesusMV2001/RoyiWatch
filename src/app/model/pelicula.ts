@@ -1,7 +1,7 @@
 export class Pelicula {
-  private id: string;
-  private titulo: String;
-  private fecha: String;
+  public id: string;
+  public titulo: String;
+  public fecha: String;
 
   constructor(tit: String,fe: String){
     this.fecha = fe;

@@ -7,15 +7,21 @@ import { Observable } from 'rxjs';
 export class PeliculasService {
 
   private listaPeliculas: string;
+  private pelicula: string;
   private formulario: string;
 
   constructor(private http: HttpClient) {
+    this.pelicula='http://localhost:8080/detalle/';
     this.listaPeliculas = 'http://localhost:8080/peliculas';
     this.formulario = 'http://localhost:8080/form';
   }
 
   public findAll(): Observable<Pelicula[]> {
     return this.http.get<Pelicula[]>(this.listaPeliculas);
+  }
+
+  public findById(id: Number){
+    return this.http.get<Pelicula>(this.pelicula+id);
   }
 
   public save(user: Pelicula) {

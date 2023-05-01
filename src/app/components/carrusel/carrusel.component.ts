@@ -19,7 +19,6 @@ export class CarruselComponent implements OnInit {
   ngOnInit() {
     
     this.peliService.findAll().subscribe(data => {
-      console.log(data);
       this.products = data;
     });
     
