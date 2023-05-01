@@ -16,6 +16,8 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { HttpClientModule } from '@angular/common/http';
 import { PeliculasService } from './services/peliculas.service';
+import { BuscadorComponent } from './components/buscador/buscador.component';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { PeliculasService } from './services/peliculas.service';
     FormComponent,
     DetailsComponent,
     ErrorComponent,
-    CarruselComponent
+    CarruselComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { PeliculasService } from './services/peliculas.service';
     ButtonModule,
     CarouselModule,
     MultiSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    InputTextModule
   ],
   providers: [PeliculasService],
   bootstrap: [AppComponent]
