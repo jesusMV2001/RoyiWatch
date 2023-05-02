@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 import { IndexComponent } from './components/index/index.component';
 import { FormComponent } from './components/form/form.component';
 import { DetailsComponent } from './components/details/details.component';
@@ -29,7 +30,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     DetailsComponent,
     ErrorComponent,
     CarruselComponent,
-    
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
